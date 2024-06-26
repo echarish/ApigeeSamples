@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>VK-VerifyApiKey</Name>
+            </Step>
+            <Step>
+                <Name>AM-RemoveQueryParamApikey</Name>
+            </Step>
+            <Step>
+                <Name>AM-SetRequestPayload</Name>
+            </Step>
+            <Step>
+                <Name>KVM-GetMapsKey</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>SC-MapAddressValidation</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <Flows/>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/addressvalidation</BasePath>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout continueOnError="false" enabled="true" name="SC-MapAddressValidation">
+    <DisplayName>SC-MapAddressValidation</DisplayName>
+    <Properties/>
+    <Request variable="requestPayload">
+        <Set>
+            <Verb>POST</Verb>
+            <Headers>
+                <Header name="Content-Type">application/json</Header>
+            </Headers>
+            <QueryParams>
+                <QueryParam name="key">{gmaps_key}</QueryParam>
+            </QueryParams>
+        </Set>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>response</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://addressvalidation.googleapis.com/v1:validateAddress</URL>
+    </HTTPTargetConnection>
+</ServiceCallout><!--<ServiceCallout name="SC-MapAddressValidation">-->
+<!--    <Request variable="requestPayload">-->
+<!--        <Set>-->
+<!--            <Verb>POST</Verb>-->
+<!--            <Path>https://addressvalidation.googleapis.com/v1:validateAddress?key=API_KEY</Path>-->
+<!--            <Headers>-->
+<!--                <Header name="Content-Type">application/json</Header>-->
+<!--            </Headers>-->
+<!--        </Set>-->
+<!--        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>-->
+<!--    </Request>-->
+<!--    <Response>responsePayload</Response>-->
+<!--    <Timeout>30000</Timeout>-->
+<!--</ServiceCallout>-->

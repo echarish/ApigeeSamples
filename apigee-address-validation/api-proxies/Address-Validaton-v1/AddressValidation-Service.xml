@@ -1,0 +1,17 @@
+<APIProxy revision="23" name="AddressValidation-Service">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1719391440435</CreatedAt>
+    <LastModifiedAt>1719391440435</LastModifiedAt>
+    <BasePaths>/v1/addressvalidation</BasePaths>
+    <Policies>
+        <Policy>AM-SetRequestPayload</Policy>
+        <Policy>SC-MapAddressValidation</Policy>
+        <Policy>KVM-GetMapsKey</Policy>
+        <Policy>AM-RemoveQueryParamApikey</Policy>
+        <Policy>VK-VerifyApiKey</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+</APIProxy>

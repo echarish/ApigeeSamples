@@ -54,7 +54,7 @@ apigeecli kvms entries create -m address-gmap-keys -k gmaps_key -l $GMAPS_KEY -e
 
 ```
 git clone https://github.com/echarish/ApigeeSamples.git
-cd ApigeeSamples/apigee-address-validation
+cd ApigeeSamples/apigee-address-validation/apiproxy
 
 apigeecli apis import -o $PROJECT -f . -t $(gcloud auth print-access-token)
 
